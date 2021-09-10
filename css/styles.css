@@ -30,4 +30,6 @@ input[type="text"]:disabled {
 
 h1 {
     text-align: center;
+    text-decoration-color: rgba(0, 0, 0, 0.75);
+    background-color: skyblue;
 }

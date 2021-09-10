@@ -1,47 +1,98 @@
-function Add(){    
-    var no1=parseInt($("#txtNo1").val());    
-    var no2=parseInt($("#txtNo2").val());    
-    var result =no1+no2;       
-    $(".result").html(result); 
-}    
-function Substract(){    
-    var no1=parseInt($("#txtNo1").val());    
-    var no2=parseInt($("#txtNo2").val());    
-    var result =no1-no2;  
-    $(".result").html(result); 
-}    
-function Multiply(){    
-    var no1=parseInt($("#txtNo1").val());    
-    var no2=parseInt($("#txtNo2").val());    
-    var result =no1*no2;   
-    $(".result").html(result); 
-}    
-function Divide(){    
-    var no1=parseInt($("#txtNo1").val());    
-    var no2=parseInt($("#txtNo2").val());    
-    var result =no1/no2;
-    $(".result").html(result);  
+function add(no1,no2)
+{
+   let result = no1 + no2;
+   return result;
 }
-function Mode(){    
-    var no1=parseInt($("#txtNo1").val());    
-    var no2=parseInt($("#txtNo2").val());    
-    var result =no1%no2;
-    $(".result").html(result); 
+function Subtract(no1,no2)
+{
+   let result = no1 - no2;
+   return result;
 }
-$(document).ready(function(){    
-    $("#btnAdd").on('click',function(){    
-        Add();    
-    });    
-    $("#btnSubstract").on('click',function(){    
-        Substract();    
-    })    
-    $("#btnMultiply").on('click',function(){    
-        Multiply();    
-    })    
-    $("#btnDivide").on('click',function(){    
-        Divide();
+function Multiply(no1,no2)
+{
+    let result = no1 * no2;
+    return result;
+}
+function Mode(no1,no2)
+{
+    let result = no1 % no2;
+    return result;
+}
+function Divide(no1,no2)
+{
+    let result = no1 / no2;
+}
+
+// user interface logic starts:
+
+$(document).ready(function(){ 
+    $("#btnAdd").click(function(event){
+        event.preventDefault();   
+        let num1 = $("#txtNo1").val();
+        let num2 = $("#txtNo2").val();
+
+        $("#txtNo1").val("");
+        $("#txtNo2").val("");
+
+        let no1 = Number(num1);
+        let no2 = Number(num2);
+        let result = add(no1,no2);
+        $(".result").html(result);
     });
-    $("#btnMode").on('click',function(){    
-        Mode();
+
+    $("#btnSubtract").click(function(event){
+        event.preventDefault();   
+        let num1 = $("#txtNo1").val();
+        let num2 = $("#txtNo2").val();
+
+        $("#txtNo1").val("");
+        $("#txtNo2").val("");
+
+        let no1 = Number(num1);
+        let no2 = Number(num2);
+        let result = Subtract(no1,no2);
+        $(".result").html(result);
     });
-});
+
+    $("#btnMultiply").click(function(event){
+        event.preventDefault();   
+        let num1 = $("#txtNo1").val();
+        let num2 = $("#txtNo2").val();
+
+        $("#txtNo1").val("");
+        $("#txtNo2").val("");
+
+        let no1 = Number(num1);
+        let no2 = Number(num2);
+        let result = Multiply(no1,no2);
+        $(".result").html(result);
+    });
+
+    $("#btnDivide").click(function(event){
+        event.preventDefault();   
+        let num1 = $("#txtNo1").val();
+        let num2 = $("#txtNo2").val();
+
+        $("#txtNo1").val("");
+        $("#txtNo2").val("");
+
+        let no1 = Number(num1);
+        let no2 = Number(num2);
+        let result = Divide(no1,no2);
+        $(".result").html(result);
+    });
+
+    $("#btnMode").click(function(event){
+        event.preventDefault();   
+        let num1 = $("#txtNo1").val();
+        let num2 = $("#txtNo2").val();
+
+        $("#txtNo1").val("");
+        $("#txtNo2").val("");
+
+        let no1 = Number(num1);
+        let no2 = Number(num2);
+        let result = Mode(no1,no2);
+        $(".result").html(result);
+    })
+    });

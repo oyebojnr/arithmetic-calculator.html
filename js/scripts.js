@@ -82,5 +82,17 @@ $(document).ready(function(){
         $(".result").html(result);
     });
 
-    
+    $("#btnMode").click(function(event){
+        event.preventDefault();   
+        let num1 = $("#txtNo1").val();
+        let num2 = $("#txtNo2").val();
+
+        $("#txtNo1").val("");
+        $("#txtNo2").val("");
+
+        let no1 = Number(num1);
+        let no2 = Number(num2);
+        let result = Mode(no1,no2);
+        $(".result").html(result);
+    });
     });

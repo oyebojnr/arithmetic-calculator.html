@@ -27,3 +27,7 @@ input[type="text"]:disabled {
     text-align: right;
     padding: 8px;
 }
+
+h1 {
+    text-align: center;
+}

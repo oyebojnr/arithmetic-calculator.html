@@ -21,10 +21,12 @@ function Mode(no1,no2)
 function Divide(no1,no2)
 {
     let result = no1 / no2;
+    return result;
 }
 function Percent(no1,no2)
 {
-    let result = (no1 / no2) * 100;
+    let result = no1 / no2 * 100;
+    return result;
 }
 
 // user interface logic starts:
